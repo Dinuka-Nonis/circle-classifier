@@ -16,3 +16,17 @@ class NeuralNetwork:
 
         self.W2 = np.random.randn(hidden_size, output_size) * 0.1
         self.b2 = np.zeros((1, output_size))
+
+    def sigmoid(self, x):
+        return 1/ (1 + np.exp(-x))
+    
+    def forward(self, x):
+         # Hidden layer
+        self.z1 = x @ self.W1 + self.b1
+        self.a1 = self.sigmoid(self.z1)
+
+        # Output layer
+        self.z2 = self.a1 @ self.W2 + self.b2
+        self.a2 = self.sigmoid(self.z2)
+
+        return self.a2
