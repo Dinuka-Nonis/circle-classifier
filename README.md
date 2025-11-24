@@ -81,3 +81,6 @@ The training script includes:
 These visuals help understand how the network learns non-linear boundaries.
 
 ---
+
+![alt text](image.png)
+![alt text](image-1.png)
